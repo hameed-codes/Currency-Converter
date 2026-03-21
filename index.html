@@ -4,17 +4,17 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Currency Convertor</title>
+    <title>Currency Converter</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
 </head>
 
-<body class="">
+<body class="d-flex align-items-center justify-content-center">
 
 
-    <div class="container-lg convertor">
+    <div class="container d-flex align-items-center justify-content-center flex-column" id="converter">
         <h1>Currency Convertor</h1>
         <div class="container from-box">
             <label for="#from-dropdown">From</label>
@@ -22,7 +22,7 @@
                 <div class="dropdown" id="from-dropdown">
                     <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
                         aria-expanded="false">
-                        <img src="https://flagcdn.com/w320/pk.png" alt="pk">
+                        <img src="https://flagcdn.com/w320/pk.png" alt="pk" width="50">
                         Dropdown button
                     </button>
                     <ul class="dropdown-menu">
@@ -35,7 +35,7 @@
             </div>
         </div>
 
-        <button class="btn btn-primary">Exchnage</button>
+        <button class="btn btn-primary"><i class="fa-solid fa-arrows-rotate"></i></button>
 
         <div class="container from-box">
             <label for="#to-dropdown">To</label>
@@ -43,7 +43,7 @@
                 <div class="dropdown" id="to-dropdown">
                     <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
                         aria-expanded="false">
-                        <img src="https://flagcdn.com/w320/pk.png" alt="pk">
+                        <img src="https://flagcdn.com/w320/pk.png" alt="pk" width="50">
                         Dropdown button
                     </button>
                     <ul class="dropdown-menu">
