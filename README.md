@@ -5,7 +5,7 @@ A modern, responsive **Currency Converter** web application built with HTML, CSS
 ---
 
 ## Live Demo
-> Live Link: [Currency Converter Preview]()
+> Live Link: [Currency Converter Preview](https://hameed-codes.github.io/Currency-Converter/)
 
 ---
 
