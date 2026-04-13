@@ -40,7 +40,8 @@ async function calculateExchangeRate(from, to) {
     let currAPI = `https://open.er-api.com/v6/latest/${from}`
     let api = await fetch(currAPI);
     let data = await api.json();
-    exchangeRate = data.rates[to];
+    let largeFloatingValue = data.rates[to];
+    exchangeRate = parseFloat(largeFloatingValue.toFixed(2));
 }
 
 //updating the on screen exchange rate for the user
@@ -69,7 +70,8 @@ function calculateAmount(amount, result, rate) {
         return;
     }
 
-    result.value = rate*amount.value;
+    let totalAmount = rate*amount.value;
+    result.value = parseFloat(totalAmount.toFixed(2));
 }
 
 
@@ -88,6 +90,8 @@ dropdowns.forEach((select) => {
     })
 })
 
+
+//swap btn functionality
 swapBtn.addEventListener("click", async ()=> {
     [fromCurr, toCurr] = [toCurr, fromCurr];
     await calculateExchangeRate(fromCurr, toCurr);
@@ -100,4 +104,14 @@ swapBtn.addEventListener("click", async ()=> {
 
 calculate.addEventListener("click", ()=> {
     calculateAmount(inputBar, resultBar, exchangeRate);
+})
+
+//keyboard Support
+document.addEventListener("keydown", (event) => {
+    let key = event.key;
+    if(key === "Enter") {
+        calculate.click();
+    } else {
+        return;
+    }
 })
